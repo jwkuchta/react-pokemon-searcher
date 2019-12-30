@@ -32,7 +32,7 @@ class PokemonForm extends React.Component {
     return (
       <div>
         <h3>Add a Pokemon!</h3>
-        <Form onSubmit={e => this.props.handleSubmit(e, this.state)} onReset={this.resetForm}>
+        <Form onSubmit={e => this.props.handleSubmit(e, this.state)} onReset={this.resetForm} >
           <Form.Group widths="equal">
             <Form.Input fluid label="Name" placeholder="Name" name="name" 
             value={this.state.name} onChange={this.handleChange} />

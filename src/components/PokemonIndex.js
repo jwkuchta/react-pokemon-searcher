@@ -26,9 +26,13 @@ class PokemonPage extends React.Component {
   }
 
   handleSubmit = (e, poke) => {
-
     e.preventDefault()
+    this.postNewPoke(poke)
+    let form = e.target
+    form.reset()
+  }
 
+  postNewPoke = (poke) => {
     fetch(pokeUrl, {
       method: 'post',
       headers: {
